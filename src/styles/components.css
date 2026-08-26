@@ -1,0 +1,16 @@
+.section-title { display: inline-block; font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; letter-spacing: 2px; margin: 0; color: var(--text); text-transform: uppercase; }
+.section-title::after { content: ""; display: block; width: 72px; height: 5px; margin-top: 10px; background: var(--accent); }
+.section-title.center::after { margin-left: auto; margin-right: auto; }
+.quote { min-height: 5.4em; margin: 0; font-size: 1.05rem; font-style: italic; line-height: 1.7; color: var(--muted); }
+.btn { display: inline-block; margin: 18px 0; background: #14120e; color: var(--primary); border: 1px solid var(--primary); padding: 11px 26px; font-weight: 700; font-size: 0.95rem; letter-spacing: 0.5px; cursor: pointer; text-decoration: none; transition: background 0.45s ease, color 0.45s ease, box-shadow 0.3s ease; }
+.btn:hover { background: var(--primary); color: #14120e; box-shadow: 0 10px 22px rgba(255, 252, 225, 0.25); }
+.tone-primary { background: var(--surface); }
+.tone-deep { background: linear-gradient(160deg, #17402c 0%, #0f2318 100%); }
+.sticky-section { position: sticky; top: 0; background: linear-gradient(160deg, #1c2a20 0%, #10150f 45%, #0a0c09 100%); box-shadow: 0 -26px 64px rgba(0, 0, 0, 0.6); }
+.sticky-section.tone-deep { background: linear-gradient(160deg, #17402c 0%, #0f2318 100%); }
+.panel { background: linear-gradient(160deg, #1d5c39 0%, #10231a 100%); border: 1px solid var(--primary); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); }
+.nav-btn { background: transparent; border: none; color: var(--accent); cursor: pointer; display: grid; place-items: center; padding: 6px; transition: transform 0.3s ease, color 0.3s ease; }
+.nav-btn:hover { transform: scale(1.3); color: var(--accent-soft); }
+.section-icon { color: var(--accent); filter: drop-shadow(0 12px 20px rgba(46, 139, 87, 0.45)); }
+@media (max-width: 899px) { .section { text-align: center; } .section-title { font-size: 1.6rem; } .section-title::after { margin-left: auto; margin-right: auto; } .section-icon { width: 44px; height: 44px; margin-left: auto; margin-right: auto; } .ic-period { align-self: center; } .ic-place { justify-content: center; } .section li.panel { justify-content: center; padding: 10px 14px; } .quote { font-size: 0.82rem; min-height: 4em; } .section .grid { gap: 1.1rem; } }
+@media (max-width: 899px) { .info-card { width: 96vw; min-height: 0; gap: 12px; padding: 0; } .ic-title { font-size: 1.3rem; } .ic-note, .ic-place { font-size: 0.9rem; } .ic-period { font-size: 0.72rem; padding: 6px 14px; } .panel { font-size: 0.85rem; } }

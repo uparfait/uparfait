@@ -1,0 +1,6 @@
+.info-card { position: relative; display: flex; flex-direction: column; gap: 18px; width: min(640px, 96vw); }
+.ic-period { align-self: flex-start; background: var(--accent); color: var(--on-accent); padding: 8px 18px; font-size: 0.85rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; }
+.ic-title { margin: 0; font-size: clamp(1.5rem, 3.5vw, 2.2rem); font-weight: 800; line-height: 1.25; color: var(--text); text-transform: uppercase; }
+.ic-place { margin: 0; display: flex; align-items: center; gap: 8px; color: var(--accent-soft); font-weight: 600; font-size: 1.05rem; }
+.ic-note { margin: 0; color: var(--muted); line-height: 1.7; font-size: 1.05rem; }
+.ic-index { display: none; }

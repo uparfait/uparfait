@@ -1,0 +1,6 @@
+.footer { position: sticky; top: 0; min-height: 100vh; min-height: 100dvh; display: flex; align-items: center; justify-content: center; padding: 90px 20px 44px; background: linear-gradient(160deg, #1d5c39 0%, #10231a 100%); border-top: 1px solid var(--primary); box-shadow: 0 -26px 64px rgba(0, 0, 0, 0.6); }
+.contact-btn { display: grid; place-items: center; width: 56px; height: 56px; border-radius: 50%; background: var(--primary); color: #14392a; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.footer .section-title::after { display: none; }
+.contact-btn:hover { transform: translateY(-5px); box-shadow: 0 12px 24px rgba(0, 0, 0, 0.45); }
+.location { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 0; color: var(--muted); font-weight: 500; }
+.copyright { margin: 0; font-size: 0.85rem; color: var(--muted); }

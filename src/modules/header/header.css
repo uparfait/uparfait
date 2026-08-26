@@ -1,0 +1,15 @@
+.site-header { position: fixed; top: 0; left: 50%; transform: translateX(-50%); width: 100%; z-index: 50; display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 70px; padding: 0 20px; background: transparent; backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid var(--line); border-top: none; }
+.brand { display: flex; align-items: center; text-decoration: none; }
+.brand-logo { width: 50px; height: 50px; object-fit: cover; }
+.desktop-nav { display: none; gap: 24px; }
+.desktop-nav a { position: relative; color: var(--text); text-decoration: none; font-size: 0.82rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; transition: color 0.3s ease; }
+.desktop-nav a:hover { color: var(--accent); }
+.desktop-nav a.active { color: var(--accent); }
+.desktop-nav a.active::after { content: ""; position: absolute; left: 0; right: 0; bottom: -6px; height: 3px; background: var(--accent); }
+.menu-btn { background: var(--accent); color: var(--on-accent); border: 0; width: 44px; height: 44px; border-radius: 50%; cursor: pointer; display: grid; place-items: center; }
+.mobile-wrap { position: fixed; top: 70px; left: 50%; transform: translateX(-50%); width: 80%; z-index: 49; }
+.mobile-menu { display: grid; padding: 12px 20px 22px; background: rgba(20, 18, 14, 0.68); backdrop-filter: blur(22px); -webkit-backdrop-filter: blur(22px); border: 1px solid var(--line); border-top: none; }
+.mobile-menu a.active { color: var(--accent); border-left: 4px solid var(--accent); padding-left: 12px; background: rgba(46, 139, 87, 0.14); }
+.mobile-menu a { color: var(--text); text-decoration: none; padding: 12px 0; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 1px solid var(--line); }
+.mobile-menu a:hover, .mobile-menu a.active { color: var(--accent); }
+@media (min-width: 900px) { .site-header { top: 20px; width: 80%; border-top: 1px solid var(--line); } .desktop-nav { display: flex; } .menu-btn { display: none; } .mobile-wrap { display: none; } }

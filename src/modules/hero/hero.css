@@ -1,0 +1,9 @@
+.hero-bg { position: relative; overflow: hidden; --text: #ffffff; --muted: rgba(255, 255, 255, 0.9); color: #ffffff; }
+.hero-bg::before { content: ""; position: absolute; inset: -5%; filter: url("#noise"); background: radial-gradient(circle at 50% 100%, #0c0a08 20%, var(--accent) 40% 50%, #10231a 55%) no-repeat center / auto; }
+.hero-bg > * { position: relative; z-index: 1; }
+.hero-frame { position: relative; width: 70%; margin-right: auto; background: var(--surface); border: 1px solid var(--primary); padding: 42px 30px; box-shadow: 0 18px 44px rgba(0, 0, 0, 0.4); }
+.frame-label { position: absolute; left: 26px; max-width: calc(100% - 52px); white-space: nowrap; overflow: hidden; background: var(--surface); padding: 0 12px; text-transform: uppercase; font-weight: 700; letter-spacing: 1px; }
+.frame-label.top { top: 0; transform: translateY(-50%); color: var(--primary); font-size: clamp(1rem, 2.5vw, 1.3rem); }
+.frame-label.bottom { bottom: 0; transform: translateY(50%); color: var(--accent-soft); font-size: clamp(0.68rem, 2.2vw, 0.9rem); }
+.hero-intro-text { text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7), 0 2px 12px rgba(0, 0, 0, 0.45); }
+@media (max-width: 899px) { .hero-frame { width: 100%; padding: 30px 16px; } .hero-intro-text { font-size: 0.78rem; line-height: 1.55; } .hero-bg .grid { gap: 1rem; } }
