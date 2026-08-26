@@ -2,114 +2,81 @@
 
 # UWAYO PARFAIT
 
-### Fullstack Web and Mobile App Developer
+[![Typing](https://readme-typing-svg.demolab.com/?font=Segoe+UI&weight=700&size=26&duration=4000&pause=1000&color=2E8B57&center=true&vCenter=true&width=620&lines=I+am+a+Fullstack+Web+and+Mobile+App+Developer;I+build+scalable%2C+user-friendly+applications;I+turn+ideas+into+digital+transformation)](https://github.com/)
 
-*A single-page portfolio engineered as a stacking deck — every section pins to the screen and the next one glides over it.*
-
-![React](https://img.shields.io/badge/React-19-2E8B57?style=for-the-badge&logo=react&logoColor=fffce1&labelColor=14120e)
-![Vite](https://img.shields.io/badge/Vite-8-2E8B57?style=for-the-badge&logo=vite&logoColor=fffce1&labelColor=14120e)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-2E8B57?style=for-the-badge&logo=tailwindcss&logoColor=fffce1&labelColor=14120e)
-![Motion](https://img.shields.io/badge/Motion-Animations-2E8B57?style=for-the-badge&logo=framer&logoColor=fffce1&labelColor=14120e)
-![React Icons](https://img.shields.io/badge/React_Icons-Library-2E8B57?style=for-the-badge&logo=fontawesome&logoColor=fffce1&labelColor=14120e)
+![Location](https://img.shields.io/badge/Rwanda-2E8B57?style=for-the-badge&logo=googlemaps&logoColor=fffce1&labelColor=14120e&label=Based%20in)
+![Focus](https://img.shields.io/badge/Web%20%26%20Mobile-2E8B57?style=for-the-badge&logoColor=fffce1&labelColor=14120e&label=Focus)
+![Status](https://img.shields.io/badge/Open%20to%20Opportunities-2E8B57?style=for-the-badge&logoColor=fffce1&labelColor=14120e&label=Status)
 
 </div>
 
 ---
 
-## The View
+## WHO AM I
 
-A dark, cinematic canvas (`#14120e`) charged with sea green (`#2E8B57`) and warm cream (`#fffce1`). The hero opens on a turbulence-displaced radial glow — an SVG noise filter bending a green ring through black — while a framed panel carries the name in its top border and a self-typing role in its bottom border.
+I am a passionate **Fullstack Web and Mobile App Developer**.
 
-From there, the page behaves like a deck of cards:
+My career path is focused on building scalable, user-friendly applications that drive digital transformation. With a strong commitment to continuous learning, I quickly adapt to emerging technologies and frameworks, ensuring I stay ahead in the fast-evolving tech landscape. My goal is to contribute innovative solutions while gaining hands-on experience in professional software development environments.
 
-| # | Section | Behavior |
-|---|---------|----------|
-| 01 | **Who am I** | Noise-gradient hero, border-labeled frame, typewriter caret |
-| 02 | **Education** | Pins to the top, zoomed open-text entry slides in from the left |
-| 03 | **Experience** | Covers Education, entry slides in from the right |
-| 04 | **Skills** | Zooms in with green gradient rows and library icons |
-| 05 | **Technical Skills** | Deep-green stage, bars animate to their percentages |
-| 06 | **Certificates** | Flips in, gradient panels over a medal emblem |
-| 07 | **Get in Touch** | Full-height green finale with circular contact icons |
+## EXPERIENCE
 
-Every section claims `min-height: 100dvh`, sticks at `top: 0`, and lets the next one scroll over it — the magic-scroll stacking effect, built with nothing but CSS `position: sticky` and layered shadows. Texts rewrite themselves every ~5 seconds. A custom green cursor tracks the pointer. No section ever shows a scrollbar.
+> **Software Developer** — City of Kigali
+> `Feb 2026 - July 2026`
+> Professional intern at the City of Kigali, contributing to the development of back-end services.
 
-## Architecture
+## EDUCATION
 
-Module-based with dependency injection: sections never import each other. Each one registers itself into a container and the app resolves an ordered list — add, remove, or reorder a section by touching one file.
+> **A2 in Software Development** — Bulinga Technical Secondary School, Muhanga District
+> `2022 - 2025`
+> Earned an A2 level in software development.
 
-```mermaid
-graph LR
-  A[content/*.js<br/>all texts] --> M
-  C[styles/*.css<br/>all colors as tokens] --> M
-  subgraph core
-    R[registry.js<br/>register / resolve]
-  end
-  M[modules/*<br/>Hero · Education · Experience<br/>Skills · Technical · Certificates · Footer] --> R
-  R --> APP[App.jsx]
-  H[hooks/*<br/>typewriter · active section<br/>auto-advance · hash scroll] --> M
-  S[shared/*<br/>Section · Typewriter · CardDeck · icons] --> M
+## SKILLS
+
+![Computer Literacy](https://img.shields.io/badge/Computer_Literacy-2E8B57?style=for-the-badge&logo=windowsterminal&logoColor=fffce1&labelColor=14120e)
+![Web Development](https://img.shields.io/badge/Web_Development-2E8B57?style=for-the-badge&logo=html5&logoColor=fffce1&labelColor=14120e)
+![SEO](https://img.shields.io/badge/Search_Engine_Optimization-2E8B57?style=for-the-badge&logo=googlesearchconsole&logoColor=fffce1&labelColor=14120e)
+![Mobile App Development](https://img.shields.io/badge/Mobile_App_Development-2E8B57?style=for-the-badge&logo=android&logoColor=fffce1&labelColor=14120e)
+![Critical Thinking](https://img.shields.io/badge/Critical_Thinking-2E8B57?style=for-the-badge&logo=openai&logoColor=fffce1&labelColor=14120e)
+
+## TECHNICAL SKILLS
+
+```text
+Tailwind CSS            ████████████████████  98.9%
+JavaScript Programming  ███████████████████░  95%
+React.js Library        ██████████████████▓░  94%
+Express.js Framework    ██████████████████░░  90%
+Flutter Framework       █████████████████░░░  85%
+Next.js Framework       █████████████████░░░  85%
+Dart Programming        ████████████████░░░░  80%
 ```
 
-<details>
-<summary><b>Project structure</b></summary>
+![Dart](https://img.shields.io/badge/Dart-2E8B57?style=flat-square&logo=dart&logoColor=fffce1&labelColor=14120e)
+![JavaScript](https://img.shields.io/badge/JavaScript-2E8B57?style=flat-square&logo=javascript&logoColor=fffce1&labelColor=14120e)
+![React](https://img.shields.io/badge/React-2E8B57?style=flat-square&logo=react&logoColor=fffce1&labelColor=14120e)
+![Express](https://img.shields.io/badge/Express.js-2E8B57?style=flat-square&logo=express&logoColor=fffce1&labelColor=14120e)
+![Flutter](https://img.shields.io/badge/Flutter-2E8B57?style=flat-square&logo=flutter&logoColor=fffce1&labelColor=14120e)
+![Next.js](https://img.shields.io/badge/Next.js-2E8B57?style=flat-square&logo=nextdotjs&logoColor=fffce1&labelColor=14120e)
+![Tailwind](https://img.shields.io/badge/Tailwind_CSS-2E8B57?style=flat-square&logo=tailwindcss&logoColor=fffce1&labelColor=14120e)
+![Node.js](https://img.shields.io/badge/Node.js-2E8B57?style=flat-square&logo=nodedotjs&logoColor=fffce1&labelColor=14120e)
 
-```
-src/
-├── core/          # DI container: register(), resolve(), resolveAll()
-├── content/       # Every text on the site — nothing hard-coded
-├── styles/        # Every color as a CSS variable — nothing hard-coded
-├── hooks/         # useTypewriter, useActiveSection, useAutoAdvance, useHashScroll
-├── shared/        # Section wrapper, Typewriter, CardDeck, icon wrappers
-└── modules/       # One folder per section + header
-    ├── header/    # Glass nav, active-link tracking, circular mobile menu
-    ├── hero/      # Border-labeled frame over the noise gradient
-    ├── education/
-    ├── experience/
-    ├── skills/
-    ├── technical/
-    ├── certificates/
-    └── footer/
-```
+## CERTIFICATES
 
-**House rule: no source file exceeds 20 lines.** Components stay atomic; behavior lives in hooks; looks live in tokens.
+**DIGITAL TALENT PROGRAM**
+- Software Development (Advanced)
+- Software Development (Intermediate)
+- Software Development (Beginner)
 
-</details>
+**FREECODECAMP**
+- Back-End Development and APIs with Node.js
 
-## Palette
-
-| Token | Value | Role |
-|-------|-------|------|
-| `--accent` | `#2E8B57` | Sea green — actions, highlights, the hero ring |
-| `--primary` | `#fffce1` | Cream — borders, titles, button inversions |
-| `--bg` | `#14120e` | Near-black stage |
-| `--surface` | `#1e1b15` | Panels and frames |
-| `--muted` | `#b5ae9b` | Secondary text |
-
-## Run It
-
-```bash
-npm install
-npm run dev      # http://localhost:5173
-npm run build    # production build → dist/
-```
-
-## Deploy to GitHub Pages
-
-The Vite config already ships `base: "./"`, and navigation uses plain `#hash` anchors — no router, nothing to configure.
-
-1. Push this repository to GitHub.
-2. Run `npm run build`.
-3. Publish the `dist/` folder — either point Pages at a `gh-pages` branch (`npx gh-pages -d dist`) or use a Pages workflow that uploads `dist/` as the artifact.
-
-## Reach Me
-
-**Uwayo Parfait** — Rwanda
-
-[Email](mailto:parfaituwayo@gmail.com) · [WhatsApp](https://wa.me/250790401672) · [Call](tel:+250790401672)
+## GET IN TOUCH
 
 <div align="center">
 
-*Less, but better — built with React, styled with tokens, animated with Motion.*
+[![Email](https://img.shields.io/badge/Email-2E8B57?style=for-the-badge&logo=gmail&logoColor=fffce1&labelColor=14120e)](mailto:parfaituwayo@gmail.com)
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-2E8B57?style=for-the-badge&logo=whatsapp&logoColor=fffce1&labelColor=14120e)](https://wa.me/250790401672)
+[![Call](https://img.shields.io/badge/Call-2E8B57?style=for-the-badge&logo=phonepe&logoColor=fffce1&labelColor=14120e)](tel:+250790401672)
+
+*UWAYO PARFAIT — Fullstack Web and Mobile App Developer — Rwanda*
 
 </div>
