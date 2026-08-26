@@ -20,13 +20,13 @@ My career path is focused on building scalable, user-friendly applications that 
 
 ## EXPERIENCE
 
-> **Software Developer** — City of Kigali
+> **Software Developer** | City of Kigali
 > `Feb 2026 - July 2026`
 > Professional intern at the City of Kigali, contributing to the development of back-end services.
 
 ## EDUCATION
 
-> **A2 in Software Development** — Bulinga Technical Secondary School, Muhanga District
+> **A2 in Software Development** | Bulinga Technical Secondary School, Muhanga District
 > `2022 - 2025`
 > Earned an A2 level in software development.
 
@@ -77,6 +77,6 @@ Dart Programming        ████████████████░░�
 [![WhatsApp](https://img.shields.io/badge/WhatsApp-2E8B57?style=for-the-badge&logo=whatsapp&logoColor=fffce1&labelColor=14120e)](https://wa.me/250790401672)
 [![Call](https://img.shields.io/badge/Call-2E8B57?style=for-the-badge&logo=phonepe&logoColor=fffce1&labelColor=14120e)](tel:+250790401672)
 
-*UWAYO PARFAIT — Fullstack Web and Mobile App Developer — Rwanda*
+*UWAYO PARFAIT | Fullstack Web and Mobile App Developer | Rwanda*
 
 </div>
