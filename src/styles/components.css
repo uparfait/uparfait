@@ -7,6 +7,7 @@
 .tone-primary { background: var(--surface); }
 .tone-deep { background: linear-gradient(160deg, #17402c 0%, #0f2318 100%); }
 .sticky-section { position: sticky; top: 0; background: linear-gradient(160deg, #1c2a20 0%, #10150f 45%, #0a0c09 100%); box-shadow: 0 -26px 64px rgba(0, 0, 0, 0.6); }
+@media (max-width: 1024px) { .sticky-section, .footer { position: static; box-shadow: none; } }
 .sticky-section.tone-deep { background: linear-gradient(160deg, #17402c 0%, #0f2318 100%); }
 .panel { background: linear-gradient(160deg, #1d5c39 0%, #10231a 100%); border: 1px solid var(--primary); box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); }
 .nav-btn { background: transparent; border: none; color: var(--accent); cursor: pointer; display: grid; place-items: center; padding: 6px; transition: transform 0.3s ease, color 0.3s ease; }
