@@ -1,5 +1,5 @@
 export const certificates = {
-  title: "CERTIFICATES",
+  title: "Certificates",
   groups: [
     {
       from: "DIGITAL TALENT PROGRAM",

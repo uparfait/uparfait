@@ -1,5 +1,5 @@
 export const technical = {
-  title: "TECHNICAL SKILLS",
+  title: "Technical Skills",
   bars: [
     { label: "Dart Programming", value: 80 },
     { label: "JavaScript Programming", value: 95 },
