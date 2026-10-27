@@ -204,11 +204,11 @@ void main(){
     float gl = vnoise(vec2(p.x * 60. + uTime * .5, depth * 220. - uTime * 3.));
     c += vec3(1.) * pow(gl, 22.) * 1.2 * exp(-depth * 6.);
     c += vec3(1.) * smoothstep(.004, 0., depth) * .35;
-    col = vec4(c, 1. - smoothstep(.03, .22, depth));
+    col = vec4(c, 1. - smoothstep(0., .16, depth));
   }
   vec2 q = gl_FragCoord.xy / uRes;
   float side = smoothstep(0., .07, q.x) * smoothstep(1., .93, q.x);
-  float poolSide = smoothstep(0., .25, q.x) * smoothstep(1., .75, q.x);
+  float poolSide = 1. - smoothstep(.15, .48, abs(q.x - .5));
   float nearSurf = 1. - smoothstep(.02, .12, p.y - s);
   float fade = mix(side, poolSide, nearSurf) * smoothstep(1., .92, q.y);
   vec3 rgb = 1. - exp(-col.rgb * 1.6);
@@ -384,7 +384,7 @@ export function createFluid(canvas, { message, colors }) {
     const dt = Math.min(0.25, t - prevT);
     prevT = t;
     if (!reduceMotion && t > nextAuto) {
-      splash((Math.random() - 0.5) * (canvas.width / canvas.height) * 0.7, 0.7 + Math.random() * 0.4);
+      splash((Math.random() - 0.5) * (canvas.width / canvas.height) * 0.4, 0.7 + Math.random() * 0.4);
       nextAuto = t + 4 + Math.random() * 4;
     }
     const k = 1 - Math.exp(-dt * 3);
