@@ -1,14 +1,12 @@
 export const nav = {
-  brand: "UP.",
+  brand: { accent: "UWAYO", rest: "PARFAIT" },
   menu: "Toggle menu",
-  theme: "Toggle dark mode",
+  cta: { href: "#contact", label: "Contact Me" },
   links: [
     { id: "whoami", label: "Who am I" },
-    { id: "education", label: "Education" },
-    { id: "experience", label: "Experience" },
+    { id: "projects", label: "My Projects" },
     { id: "skills", label: "Skills" },
     { id: "technical", label: "Technical Skills" },
     { id: "certificates", label: "Certificates" },
-    { id: "contact", label: "Contact" },
   ],
 };
