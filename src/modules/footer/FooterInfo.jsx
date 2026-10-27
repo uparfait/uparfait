@@ -3,12 +3,12 @@ import { contact } from "../../content/contact";
 
 export default function FooterInfo() {
   return (
-    <div className="space-y-3">
+    <div className="footer-bar">
       <p className="location">
-        <PinIcon />
+        <span className="icon-circle icon-sm"><PinIcon /></span>
         <span>{contact.location}</span>
       </p>
-      <p className="copyright">{contact.copyright}</p>
+      <p className="copyright">{contact.motto}</p>
     </div>
   );
 }
