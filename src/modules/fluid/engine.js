@@ -204,10 +204,15 @@ void main(){
     float gl = vnoise(vec2(p.x * 60. + uTime * .5, depth * 220. - uTime * 3.));
     c += vec3(1.) * pow(gl, 22.) * 1.2 * exp(-depth * 6.);
     c += vec3(1.) * smoothstep(.004, 0., depth) * .35;
-    col = vec4(c, 1.);
+    col = vec4(c, 1. - smoothstep(.03, .22, depth));
   }
+  vec2 q = gl_FragCoord.xy / uRes;
+  float side = smoothstep(0., .07, q.x) * smoothstep(1., .93, q.x);
+  float poolSide = smoothstep(0., .25, q.x) * smoothstep(1., .75, q.x);
+  float nearSurf = 1. - smoothstep(.02, .12, p.y - s);
+  float fade = mix(side, poolSide, nearSurf) * smoothstep(1., .92, q.y);
   vec3 rgb = 1. - exp(-col.rgb * 1.6);
-  gl_FragColor = vec4(pow(rgb, vec3(.92)), col.a);
+  gl_FragColor = vec4(pow(rgb, vec3(.92)), col.a * fade);
 }
 `;
 
