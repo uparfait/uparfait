@@ -3,7 +3,7 @@ import useActiveSection from "../../hooks/useActiveSection";
 
 const ids = nav.links.map((link) => link.id);
 
-export default function NavLinks({ className, onNavigate }) {
+export default function NavLinks({ className, onNavigate, children }) {
   const active = useActiveSection(ids);
   return (
     <nav className={className}>
@@ -12,6 +12,7 @@ export default function NavLinks({ className, onNavigate }) {
           {link.label}
         </a>
       ))}
+      {children}
     </nav>
   );
 }
