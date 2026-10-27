@@ -1,7 +1,8 @@
 export const hero = {
   name: "UWAYO PARFAIT",
+  headline: ["Plan", "Then Code"],
   roles: ["I am a Backend Developer"],
-  cta: "Contact Me",
+  projectsCta: "My Projects",
   intro: [
     "I am a passionate Backend Developer.",
     "My career path is focused on building scalable, user-friendly applications that drive digital transformation.",
