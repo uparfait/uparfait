@@ -1,15 +1,18 @@
 @import "tailwindcss";
-:root { --accent: #2E8B57; --accent-soft: #5fb98a; --accent-deep: #1d5c39; --primary: #fffce1; --bg: #14120e; --surface: #1e1b15; --text: #fffce1; --muted: #b5ae9b; --line: rgba(255, 252, 225, 0.12); --on-accent: #ffffff; }
-* { border-radius: 0; box-sizing: border-box; }
+:root { --accent: #D2691E; --accent-deep: #A0522D; --accent-light: #F4A460; --accent-soft: #FBF0E8; --ink: #111111; --bg: #ffffff; --text: #1a1a1a; --muted: #555555; --line: #ececec; --on-accent: #ffffff; --display: "Montserrat", "Inter", sans-serif; --zoom: 1; }
+* { box-sizing: border-box; }
 html { scroll-behavior: smooth; scrollbar-width: none; -ms-overflow-style: none; overflow-x: hidden; }
 html::-webkit-scrollbar, body::-webkit-scrollbar { display: none; width: 0; height: 0; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-body { margin: 0; overflow-x: hidden; user-select: none; -webkit-user-select: none; background: var(--bg); color: var(--text); font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; -webkit-font-smoothing: antialiased; cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='22' height='22'><circle cx='11' cy='11' r='5' fill='%232E8B57' stroke='%23fffce1' stroke-width='2'/></svg>") 11 11, auto; }
-a, button, label, .nav-btn { cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='28' height='28'><circle cx='14' cy='14' r='9' fill='none' stroke='%232E8B57' stroke-width='3'/><circle cx='14' cy='14' r='3' fill='%23fffce1'/></svg>") 14 14, pointer; }
-img.avatar { border-radius: 100% !important; }
-.section { min-height: 100vh; min-height: 100dvh; width: 100%; display: flex; align-items: center; padding: 84px 12px 32px; }
-@media (min-width: 900px) { .section { padding: 100px 24px 48px; } }
+body { margin: 0; overflow-x: hidden; user-select: none; -webkit-user-select: none; background-color: var(--bg); color: var(--text); font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; -webkit-font-smoothing: antialiased; }
+body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cg fill='none' stroke='%23A0522D' stroke-opacity='.03' stroke-width='1.5'%3E%3Cpath d='M32 2L62 32L32 62L2 32Z'/%3E%3Cpath d='M32 12L52 32L32 52L12 32Z'/%3E%3C/g%3E%3Cg fill='%23A0522D' fill-opacity='.025'%3E%3Cpath d='M32 23L41 32L32 41L23 32ZM0 0H8L0 8ZM64 0H56L64 8ZM0 64H8L0 56ZM64 64H56L64 56Z'/%3E%3C/g%3E%3C/svg%3E") 0 0 / 64px 64px; }
+::selection { background: var(--accent); color: var(--on-accent); }
+a, button, label { cursor: pointer; }
+img.avatar { border-radius: 50%; }
+.section { width: 100%; padding: 32px max(16px, env(safe-area-inset-right)) 32px max(16px, env(safe-area-inset-left)); }
+@media (min-width: 900px) { .section { padding: 48px 32px; } }
 .caret { display: inline-block; width: 2px; height: 1.1em; margin-left: 3px; background: var(--accent); vertical-align: text-bottom; animation: blink 0.85s step-end infinite; }
 @keyframes blink { 50% { opacity: 0; } }
-.bounce { animation: bounce 2.4s ease-in-out infinite; }
-@keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-14px); } }
+.typewriter { display: inline-grid; }
+.typewriter > * { grid-area: 1 / 1; }
+.typewriter-ghost { visibility: hidden; }
