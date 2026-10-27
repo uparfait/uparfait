@@ -1,11 +1,11 @@
 export const contact = {
-  title: "GET IN TOUCH",
-  email: "parfaituwayo@gmail.com",
-  emailLabel: "Send me an email",
-  phone: "+250790401672",
-  phoneLabel: "Call me",
-  whatsapp: "https://wa.me/250790401672",
-  whatsappLabel: "Chat with me on WhatsApp",
+  title: "Get in Touch",
+  controls: "Mind Our Controls",
+  links: [
+    { id: "email", label: "Send me an email", sealed: "HQ0IAlkbUhUPXwUODREFGwAXQjQPCA9ED0EHCh0=" },
+    { id: "phone", label: "Call me", sealed: "BAkNVAZGXVVZFFNbVFRGW1M=" },
+    { id: "whatsapp", label: "Chat with me on WhatsApp", sealed: "GBgVHl5OR0oZTE0CAUpCWVFZFERcVV8bVF0=", newTab: true },
+  ],
   location: "Rwanda",
-  copyright: "UWAYO PARFAIT - Fullstack Web and Mobile App Developer",
+  motto: "THE SUN SHINES ON THE LIVING",
 };
