@@ -6,6 +6,7 @@ void main(){ gl_Position = vec4(aPos, 0.0, 1.0); }
 const FRAGMENT = `
 precision highp float;
 uniform vec2  uRes;
+uniform vec4  uBox;
 uniform float uTime;
 uniform vec3  uPal[6];
 uniform float uN;
@@ -78,7 +79,7 @@ float crownH(float x){
 }
 
 vec2 textUV(vec2 p){
-  vec2 uv = vec2(p.x * uRes.y / uRes.x + .5, p.y + .5);
+  vec2 uv = vec2(p.x * uBox.y / uBox.x + .5, p.y + .5);
   float t = uTime;
   uv += .0045 * vec2(vnoise(p * 6. + t * .55) - .5, vnoise(p * 6. + 31. - t * .5) - .5) * 2.;
   return uv;
@@ -164,11 +165,11 @@ vec3 liquidColor(vec2 p, vec3 n, float F, float tm){
 }
 
 vec4 shadeFull(vec2 p){
-  float px = 1.4 / uRes.y;
+  float px = 1.4 / uBox.y;
   float F, tm, F2, tm2;
   float h0 = heightAt(p, F, tm);
   if (F < -px * 2.) return vec4(0.);
-  float e = 1.5 / uRes.y;
+  float e = 1.5 / uBox.y;
   float hx = heightAt(p + vec2(e, 0.), F2, tm2);
   float hy = heightAt(p + vec2(0., e), F2, tm2);
   vec3 n = normalize(vec3(-(hx - h0) / e * .045, -(hy - h0) / e * .045, 1.));
@@ -178,7 +179,7 @@ vec4 shadeFull(vec2 p){
 vec4 shadeSimple(vec2 p){
   float tm;
   float F = field(p, tm);
-  float px = 2. / uRes.y;
+  float px = 2. / uBox.y;
   float flow = fbm(p * 2.4 + vec2(uTime * .15, -uTime * .1));
   vec3 liq = pal(flow * 1.3 + p.x * .35 + uTime * .03) * .95;
   liq += pal(.5 + p.y) * (1. - smoothstep(0., .02, F)) * .5;
@@ -186,7 +187,7 @@ vec4 shadeSimple(vec2 p){
 }
 
 void main(){
-  vec2 p = (gl_FragCoord.xy - .5 * uRes) / uRes.y;
+  vec2 p = (gl_FragCoord.xy - uBox.zw) / uBox.y;
   float s = surfY(p.x);
   vec4 col;
   if (p.y >= s){
@@ -267,7 +268,7 @@ export function createFluid(canvas, { message, colors }) {
   gl.vertexAttribPointer(aPos, 2, gl.FLOAT, false, 0, 0);
 
   const U = {};
-  for (const k of ["uRes", "uTime", "uPal", "uN", "uText", "uBurst", "uSurf"]) U[k] = gl.getUniformLocation(prog, k);
+  for (const k of ["uRes", "uBox", "uTime", "uPal", "uN", "uText", "uBurst", "uSurf"]) U[k] = gl.getUniformLocation(prog, k);
 
   const tex = gl.createTexture();
   gl.bindTexture(gl.TEXTURE_2D, tex);
@@ -298,7 +299,7 @@ export function createFluid(canvas, { message, colors }) {
 
   function drawText() {
     const H = 512;
-    const aspect = canvas.width / canvas.height;
+    const aspect = box[0] / box[1];
     const W = Math.max(64, Math.round(H * aspect));
     textCanvas.width = W;
     textCanvas.height = H;
@@ -333,17 +334,25 @@ export function createFluid(canvas, { message, colors }) {
     gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, textCanvas);
   }
 
+  const card = canvas.parentElement;
+  let box = [canvas.width, canvas.height, canvas.width / 2, canvas.height / 2];
   let renderScale = Math.min(window.devicePixelRatio || 1, 1.25);
   function resize() {
     const r = canvas.getBoundingClientRect();
+    const c = card.getBoundingClientRect();
     const w = Math.max(1, Math.round(r.width * renderScale));
     const h = Math.max(1, Math.round(r.height * renderScale));
-    if (canvas.width !== w || canvas.height !== h) {
+    const resized = canvas.width !== w || canvas.height !== h;
+    if (resized) {
       canvas.width = w;
       canvas.height = h;
       gl.viewport(0, 0, w, h);
-      drawText();
     }
+    const sx = w / Math.max(1, r.width), sy = h / Math.max(1, r.height);
+    const next = [c.width * sx, c.height * sy, (c.left - r.left + c.width / 2) * sx, (r.bottom - c.bottom + c.height / 2) * sy];
+    const reshaped = Math.abs(next[0] / next[1] - box[0] / box[1]) > 0.001;
+    box = next;
+    if (resized || reshaped) drawText();
   }
 
   let palCur = [], palTarget = [], palN = 3;
@@ -370,10 +379,10 @@ export function createFluid(canvas, { message, colors }) {
   }
 
   const onPointer = (e) => {
-    const r = canvas.getBoundingClientRect();
-    splash(((e.clientX - r.left) / r.width - 0.5) * (r.width / r.height), 0.9 + Math.random() * 0.3);
+    const c = card.getBoundingClientRect();
+    splash(((e.clientX - c.left) / c.width - 0.5) * (c.width / c.height), 0.9 + Math.random() * 0.3);
   };
-  canvas.addEventListener("pointerdown", onPointer);
+  card.addEventListener("pointerdown", onPointer);
 
   let raf = 0, visible = false, alive = true, nextAuto = 3, prevT = 0, frames = 0, acc = 0, last = 0;
   function frame() {
@@ -384,18 +393,19 @@ export function createFluid(canvas, { message, colors }) {
     const dt = Math.min(0.25, t - prevT);
     prevT = t;
     if (!reduceMotion && t > nextAuto) {
-      splash((Math.random() - 0.5) * (canvas.width / canvas.height) * 0.4, 0.7 + Math.random() * 0.4);
+      splash((Math.random() - 0.5) * (box[0] / box[1]) * 0.4, 0.7 + Math.random() * 0.4);
       nextAuto = t + 4 + Math.random() * 4;
     }
     const k = 1 - Math.exp(-dt * 3);
     for (let i = 0; i < 6; i++) for (let j = 0; j < 3; j++) palCur[i][j] += (palTarget[i][j] - palCur[i][j]) * k;
 
     gl.uniform2f(U.uRes, canvas.width, canvas.height);
+    gl.uniform4f(U.uBox, box[0], box[1], box[2], box[3]);
     gl.uniform1f(U.uTime, reduceMotion ? t * 0.25 : t);
     gl.uniform3fv(U.uPal, new Float32Array(palCur.flat()));
     gl.uniform1f(U.uN, palN);
     gl.uniform3fv(U.uBurst, new Float32Array(bursts.flat()));
-    gl.uniform1f(U.uSurf, canvas.width < canvas.height ? -0.27 : -0.24);
+    gl.uniform1f(U.uSurf, box[0] < box[1] ? -0.27 : -0.24);
     gl.drawArrays(gl.TRIANGLES, 0, 3);
 
     const nowMs = performance.now();
@@ -434,7 +444,7 @@ export function createFluid(canvas, { message, colors }) {
       alive = false;
       cancelAnimationFrame(raf);
       io.disconnect();
-      canvas.removeEventListener("pointerdown", onPointer);
+      card.removeEventListener("pointerdown", onPointer);
       gl.deleteTexture(tex);
       gl.deleteBuffer(buf);
       gl.deleteProgram(prog);
