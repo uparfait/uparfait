@@ -74,6 +74,16 @@ Back-end developer focused on scalable system architecture, identifying scaling 
 **FREECODECAMP**
 - Back-End Development and APIs with Node.js
 
+## PROFILE VISITS
+
+<div align="center">
+
+![Profile views](https://komarev.com/ghpvc/?username=uparfait&label=Profile%20views&color=D2691E&style=for-the-badge)
+
+![Profile visits by day, week, month and year](https://raw.githubusercontent.com/uparfait/uparfait/stats/visits.svg)
+
+</div>
+
 ## GET IN TOUCH
 
 <div align="center">
