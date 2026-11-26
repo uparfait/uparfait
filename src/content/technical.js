@@ -1,12 +1,13 @@
 export const technical = {
   title: "Technical Skills",
-  bars: [
-    { label: "Dart Programming", value: 80 },
-    { label: "JavaScript Programming", value: 95 },
-    { label: "React.js Library", value: 94 },
-    { label: "Express.js Framework", value: 90 },
-    { label: "Flutter Framework", value: 85 },
-    { label: "Next.js Framework", value: 85 },
-    { label: "Tailwind CSS", value: 98.9 },
+  items: [
+    { id: "node", label: "Node.js" },
+    { id: "javascript", label: "JavaScript Programming" },
+    { id: "docker", label: "Docker" },
+    { id: "nginx", label: "Nginx" },
+    { id: "git", label: "Git" },
+    { id: "postgres", label: "PostgreSQL" },
+    { id: "mysql", label: "MySQL" },
+    { id: "mongodb", label: "MongoDB" },
   ],
 };

@@ -39,10 +39,12 @@
 .skill-label { font-family: var(--display); font-size: 1rem; font-weight: 700; line-height: 1.35; color: var(--ink); }
 .technical-card { padding: 40px 22px; }
 @media (min-width: 900px) { .technical-card { padding: 56px; } }
-.bar-head { display: flex; justify-content: space-between; gap: 12px; margin-bottom: 10px; font-size: 0.9rem; font-weight: 500; }
-.bar-value { color: var(--accent-light); font-weight: 700; }
-.bar-track { height: 8px; overflow: hidden; border-radius: 999px; background: rgba(255, 255, 255, 0.14); }
-.bar-fill { height: 100%; border-radius: 999px; background: linear-gradient(90deg, var(--accent), var(--accent-light)); }
+.tech-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 0; padding: 0; list-style: none; }
+@media (min-width: 900px) { .tech-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; } }
+.tech-item { display: flex; align-items: center; gap: 12px; min-width: 0; padding: 14px 16px; border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 14px; background: rgba(255, 255, 255, 0.06); font-size: 0.9rem; font-weight: 600; transition: border-color 0.25s ease; }
+.tech-item:hover { border-color: rgba(244, 164, 96, 0.6); }
+.tech-icon { display: grid; place-items: center; flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%; background: rgba(210, 105, 30, 0.22); color: var(--accent-light); }
+.tech-icon svg { width: 50%; height: 50%; }
 .cert-card { padding: 28px; }
 .cert-list { display: grid; gap: 14px; margin: 0; padding: 0; list-style: none; }
 .cert-list li { display: flex; align-items: center; gap: 12px; font-weight: 500; }
