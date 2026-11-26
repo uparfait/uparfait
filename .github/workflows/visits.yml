@@ -1,0 +1,44 @@
+name: Visits
+
+on:
+  schedule:
+    - cron: "10 0 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/visits.yml
+      - scripts/visits.mjs
+
+permissions:
+  contents: write
+
+concurrency:
+  group: visits
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Open stats branch
+        run: |
+          if git fetch --depth=1 origin stats:refs/remotes/origin/stats; then
+            git worktree add -B stats stats origin/stats
+          else
+            git worktree add --orphan -b stats stats
+          fi
+
+      - name: Update visits
+        run: node scripts/visits.mjs uparfait stats
+
+      - name: Save
+        working-directory: stats
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add visits.json visits.svg
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "Update visits"
+          git push origin stats
