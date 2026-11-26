@@ -74,13 +74,13 @@ Back-end developer focused on scalable system architecture, identifying scaling 
 **FREECODECAMP**
 - Back-End Development and APIs with Node.js
 
-## PROFILE VISITS
+## MY VISITS
 
 <div align="center">
 
-![Profile views](https://komarev.com/ghpvc/?username=uparfait&label=Profile%20views&color=D2691E&style=for-the-badge)
+![My visits](https://komarev.com/ghpvc/?username=uparfait&label=My%20visits&color=D2691E&style=for-the-badge)
 
-![Profile visits by day, week, month and year](https://raw.githubusercontent.com/uparfait/uparfait/stats/visits.svg)
+![My visits by day, week, month and year](https://raw.githubusercontent.com/uparfait/uparfait/stats/visits.svg)
 
 </div>
 

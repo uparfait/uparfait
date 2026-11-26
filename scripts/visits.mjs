@@ -66,10 +66,10 @@ function render(data, today) {
   });
   const monthTotals = months.map((m) => Object.entries(data.days).filter(([k]) => k.startsWith(m)).reduce((a, [, v]) => a + v, 0));
   const monthName = (m) => new Date(m + "-01").toLocaleString("en-US", { month: "short", year: "2-digit", timeZone: "UTC" });
-  return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="Profile visits">
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="My visits">
 <style>text{font-family:"Segoe UI",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif}.title{font-size:16px;font-weight:700;fill:#D2691E;letter-spacing:1.5px}.label{font-size:12px;fill:#a89a90}.value{font-size:22px;font-weight:700;fill:#ffffff}.axis{font-size:11px;fill:#7d7068}</style>
 <rect width="${W}" height="${H}" rx="14" fill="#111111"/>
-<text x="24" y="40" class="title">PROFILE VISITS</text><text x="${W - 24}" y="40" class="axis" text-anchor="end">Updated ${today} UTC</text>
+<text x="24" y="40" class="title">MY VISITS</text><text x="${W - 24}" y="40" class="axis" text-anchor="end">Updated ${today} UTC</text>
 ${tileSvg}
 ${bars({ x: 24, y: 186, w: 470, h: 120, values: dayKeys.map((k) => data.days[k] || 0), labels: dayKeys, title: "Daily, last 30 days" })}
 ${bars({ x: 530, y: 186, w: 286, h: 120, values: monthTotals, labels: months.map(monthName), title: "Monthly, last 12 months" })}
