@@ -5,7 +5,7 @@
 [![Typing](./readme/typing.svg)](https://github.com/)
 
 ![Location](https://img.shields.io/badge/Rwanda-D2691E?style=for-the-badge&logo=googlemaps&logoColor=D2691E&labelColor=111111&label=Based%20in)
-![Focus](https://img.shields.io/badge/Web%20%26%20Mobile-D2691E?style=for-the-badge&logoColor=D2691E&labelColor=111111&label=Focus)
+![Focus](https://img.shields.io/badge/Node.js%20Back%20End-D2691E?style=for-the-badge&logoColor=D2691E&labelColor=111111&label=Focus)
 ![Status](https://img.shields.io/badge/Open%20to%20Opportunities-D2691E?style=for-the-badge&logoColor=D2691E&labelColor=111111&label=Status)
 
 </div>
@@ -14,9 +14,7 @@
 
 ## WHO AM I
 
-I am a passionate **Backend Developer**.
-
-My career path is focused on building scalable, user-friendly applications that drive digital transformation. With a strong commitment to continuous learning, I quickly adapt to emerging technologies and frameworks, ensuring I stay ahead in the fast-evolving tech landscape. My goal is to contribute innovative solutions while gaining hands-on experience in professional software development environments.
+As a Back End Developer: Designing scalable system architectures, addressing scaling bottlenecks, optimizing testing pipelines, and aligning with functional requirements for long-term scalability is the goal.
 
 ## MY PROJECTS
 
@@ -31,32 +29,40 @@ My career path is focused on building scalable, user-friendly applications that 
 
 ## SKILLS
 
-![Computer Literacy](https://img.shields.io/badge/Computer_Literacy-D2691E?style=for-the-badge&logo=windowsterminal&logoColor=D2691E&labelColor=111111)
-![Web Development](https://img.shields.io/badge/Web_Development-D2691E?style=for-the-badge&logo=html5&logoColor=D2691E&labelColor=111111)
-![SEO](https://img.shields.io/badge/Search_Engine_Optimization-D2691E?style=for-the-badge&logo=googlesearchconsole&logoColor=D2691E&labelColor=111111)
-![Mobile App Development](https://img.shields.io/badge/Mobile_App_Development-D2691E?style=for-the-badge&logo=android&logoColor=D2691E&labelColor=111111)
-![Critical Thinking](https://img.shields.io/badge/Critical_Thinking-D2691E?style=for-the-badge&logo=openai&logoColor=D2691E&labelColor=111111)
+![Serverless Framework](https://img.shields.io/badge/Serverless_Framework-D2691E?style=for-the-badge)
+![Version Control](https://img.shields.io/badge/Version_Control-D2691E?style=for-the-badge)
+![Rate Limiting](https://img.shields.io/badge/Rate_Limiting-D2691E?style=for-the-badge)
+![Load Balancing](https://img.shields.io/badge/Load_Balancing-D2691E?style=for-the-badge)
+![Microservices](https://img.shields.io/badge/Microservices-D2691E?style=for-the-badge)
+![Continuous Integration and Continuous Delivery (CI/CD)](https://img.shields.io/badge/Continuous_Integration_and_Continuous_Delivery_%28CI%2FCD%29-D2691E?style=for-the-badge)
+![Error Handling](https://img.shields.io/badge/Error_Handling-D2691E?style=for-the-badge)
+![Message Queues](https://img.shields.io/badge/Message_Queues-D2691E?style=for-the-badge)
+![Data Caching](https://img.shields.io/badge/Data_Caching-D2691E?style=for-the-badge)
+![Software Testing](https://img.shields.io/badge/Software_Testing-D2691E?style=for-the-badge)
+![API Development](https://img.shields.io/badge/API_Development-D2691E?style=for-the-badge)
+![Databases](https://img.shields.io/badge/Databases-D2691E?style=for-the-badge)
+![Docker](https://img.shields.io/badge/Docker-D2691E?style=for-the-badge)
+![Secure Authentication](https://img.shields.io/badge/Secure_Authentication-D2691E?style=for-the-badge)
+![Debugging](https://img.shields.io/badge/Debugging-D2691E?style=for-the-badge)
+![Programming](https://img.shields.io/badge/Programming-D2691E?style=for-the-badge)
+![Scaling Bottlenecks](https://img.shields.io/badge/Scaling_Bottlenecks-D2691E?style=for-the-badge)
+![Testing Pipelines](https://img.shields.io/badge/Testing_Pipelines-D2691E?style=for-the-badge)
+![System Architecture & Design](https://img.shields.io/badge/System_Architecture_%26_Design-D2691E?style=for-the-badge)
+![API & Integration Development](https://img.shields.io/badge/API_%26_Integration_Development-D2691E?style=for-the-badge)
+![Performance, Security](https://img.shields.io/badge/Performance%2C_Security-D2691E?style=for-the-badge)
+![Database Management & Optimization](https://img.shields.io/badge/Database_Management_%26_Optimization-D2691E?style=for-the-badge)
+![Back-End Web Development](https://img.shields.io/badge/Back--End_Web_Development-D2691E?style=for-the-badge)
 
 ## TECHNICAL SKILLS
 
-```text
-Tailwind CSS            ████████████████████  98.9%
-JavaScript Programming  ███████████████████░  95%
-React.js Library        ██████████████████▓░  94%
-Express.js Framework    ██████████████████░░  90%
-Flutter Framework       █████████████████░░░  85%
-Next.js Framework       █████████████████░░░  85%
-Dart Programming        ████████████████░░░░  80%
-```
-
-![Dart](https://img.shields.io/badge/Dart-D2691E?style=flat-square&logo=dart&logoColor=D2691E&labelColor=111111)
-![JavaScript](https://img.shields.io/badge/JavaScript-D2691E?style=flat-square&logo=javascript&logoColor=D2691E&labelColor=111111)
-![React](https://img.shields.io/badge/React-D2691E?style=flat-square&logo=react&logoColor=D2691E&labelColor=111111)
-![Express](https://img.shields.io/badge/Express.js-D2691E?style=flat-square&logo=express&logoColor=D2691E&labelColor=111111)
-![Flutter](https://img.shields.io/badge/Flutter-D2691E?style=flat-square&logo=flutter&logoColor=D2691E&labelColor=111111)
-![Next.js](https://img.shields.io/badge/Next.js-D2691E?style=flat-square&logo=nextdotjs&logoColor=D2691E&labelColor=111111)
-![Tailwind](https://img.shields.io/badge/Tailwind_CSS-D2691E?style=flat-square&logo=tailwindcss&logoColor=D2691E&labelColor=111111)
-![Node.js](https://img.shields.io/badge/Node.js-D2691E?style=flat-square&logo=nodedotjs&logoColor=D2691E&labelColor=111111)
+![Node.js](https://img.shields.io/badge/Node.js-D2691E?style=for-the-badge&logo=nodedotjs&logoColor=D2691E&labelColor=111111)
+![JavaScript](https://img.shields.io/badge/JavaScript-D2691E?style=for-the-badge&logo=javascript&logoColor=D2691E&labelColor=111111)
+![Docker](https://img.shields.io/badge/Docker-D2691E?style=for-the-badge&logo=docker&logoColor=D2691E&labelColor=111111)
+![Nginx](https://img.shields.io/badge/Nginx-D2691E?style=for-the-badge&logo=nginx&logoColor=D2691E&labelColor=111111)
+![Git](https://img.shields.io/badge/Git-D2691E?style=for-the-badge&logo=git&logoColor=D2691E&labelColor=111111)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-D2691E?style=for-the-badge&logo=postgresql&logoColor=D2691E&labelColor=111111)
+![MySQL](https://img.shields.io/badge/MySQL-D2691E?style=for-the-badge&logo=mysql&logoColor=D2691E&labelColor=111111)
+![MongoDB](https://img.shields.io/badge/MongoDB-D2691E?style=for-the-badge&logo=mongodb&logoColor=D2691E&labelColor=111111)
 
 ## CERTIFICATES
 
