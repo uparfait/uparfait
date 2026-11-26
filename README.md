@@ -14,7 +14,7 @@
 
 ## WHO AM I
 
-As a Back End Developer: Designing scalable system architectures, addressing scaling bottlenecks, optimizing testing pipelines, and aligning with functional requirements for long-term scalability is the goal.
+Back-end developer focused on scalable system architecture, identifying scaling bottlenecks, and optimizing testing pipelines. Aligns technical solutions with functional requirements to support long-term scalability and maintainability. Experience contributing to back-end software development and providing IT support.
 
 ## MY PROJECTS
 
