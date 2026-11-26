@@ -23,7 +23,7 @@ function record(data, total, today) {
     data.last = { date: today, total };
     return;
   }
-  const gained = Math.max(0, total - last.total - 1);
+  const gained = Math.max(0, total - last.total);
   const gap = Math.max(1, Math.round((Date.parse(today) - Date.parse(last.date)) / DAY));
   if (today === last.date) data.days[today] = (data.days[today] || 0) + gained;
   else for (let i = 1; i <= gap; i++) {
