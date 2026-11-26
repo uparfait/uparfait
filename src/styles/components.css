@@ -33,6 +33,13 @@
 .project-title { margin: 0; font-family: var(--display); font-size: 1.05rem; font-weight: 800; color: var(--ink); }
 .project-note { margin: 0; color: var(--muted); font-size: 0.88rem; line-height: 1.55; }
 .project-url { color: var(--accent-deep); font-size: 0.78rem; font-weight: 600; user-select: text; -webkit-user-select: text; cursor: text; }
+.skill-tabs { display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-bottom: var(--space-md); }
+.skill-tab { display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 0 8px 0 16px; border: 1px solid var(--line); border-radius: 999px; background: var(--bg); color: var(--ink); font-family: var(--display); font-size: 0.85rem; font-weight: 600; cursor: pointer; transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease; }
+.skill-tab:hover { border-color: rgba(210, 105, 30, 0.5); }
+.skill-tab:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.skill-tab.active { border-color: var(--accent); background: var(--accent); color: var(--ink); }
+.skill-count { display: grid; place-items: center; min-width: 24px; height: 24px; padding: 0 6px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-deep); font-size: 0.75rem; font-weight: 700; }
+.skill-tab.active .skill-count { background: #ffffff; color: var(--accent); }
 .skill-grid { display: flex; flex-wrap: wrap; gap: var(--space-sm); margin: 0; padding: 0; list-style: none; }
 .skill-tile { display: flex; align-items: center; gap: 10px; padding: 6px 14px 6px 6px; border-radius: 999px; }
 @media (min-width: 768px) { .fill-last > :last-child:nth-child(odd) { grid-column: 1 / -1; } }
