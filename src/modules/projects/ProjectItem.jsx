@@ -3,7 +3,7 @@ import ArrowIcon from "../../shared/icons/ArrowIcon";
 export default function ProjectItem({ icon, tag, title, url, link, note, visit }) {
   return (
     <li className="card project-item">
-      <span className="icon-circle icon-lg">{icon}</span>
+      <span className="icon-circle">{icon}</span>
       <div className="project-body">
         <div className="project-head">
           <h3 className="project-title">{title}</h3>
