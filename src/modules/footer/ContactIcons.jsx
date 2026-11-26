@@ -14,7 +14,7 @@ function open({ sealed, newTab }) {
 
 export default function ContactIcons() {
   return (
-    <div className="flex justify-center gap-5">
+    <div className="flex justify-center gap-4">
       {contact.links.map((link) => (
         <button key={link.id} type="button" className="contact-btn" onClick={() => open(link)} aria-label={link.label}>
           {icons[link.id]}

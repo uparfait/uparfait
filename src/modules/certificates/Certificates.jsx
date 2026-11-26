@@ -8,7 +8,7 @@ export default function Certificates() {
   return (
     <Section id="certificates">
       <SectionHeader icon={<FaMedal />} title={certificates.title} />
-      <div className="fill-last grid gap-4 md:grid-cols-2">
+      <div className="fill-last grid gap-3 md:grid-cols-2">
         {certificates.groups.map((group) => (
           <CertGroup key={group.from} group={group} />
         ))}

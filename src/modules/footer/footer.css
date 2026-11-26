@@ -1,9 +1,9 @@
-.footer { padding-bottom: calc(32px + env(safe-area-inset-bottom)); }
-.contact-card { padding: 56px 24px; text-align: center; background: radial-gradient(circle at 50% 120%, rgba(210, 105, 30, 0.65), transparent 55%), linear-gradient(180deg, #120d0b 0%, #2c1810 100%); }
-.contact-content { display: grid; justify-items: center; gap: 22px; }
+.footer { padding-bottom: calc(var(--section-y) + env(safe-area-inset-bottom)); }
+.contact-card { padding: var(--dark-pad); text-align: center; background: radial-gradient(circle at 50% 120%, rgba(210, 105, 30, 0.65), transparent 55%), linear-gradient(180deg, #120d0b 0%, #2c1810 100%); }
+.contact-content { display: grid; justify-items: center; gap: var(--space-md); }
 .contact-note { margin: 0; color: var(--accent-light); font-size: 1.05rem; font-weight: 600; }
 .contact-btn { display: grid; place-items: center; width: 56px; height: 56px; border: 0; border-radius: 50%; cursor: pointer; background: #ffffff; color: var(--accent); transition: background 0.25s ease, color 0.25s ease; }
 .contact-btn:hover { background: var(--accent); color: #ffffff; }
-.footer-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-top: 24px; color: var(--muted); font-size: 0.85rem; }
+.footer-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-sm); margin-top: var(--space-md); color: var(--muted); font-size: 0.85rem; }
 .location { display: flex; align-items: center; gap: 10px; margin: 0; font-weight: 500; }
 .copyright { margin: 0; font-size: 0.7rem; font-weight: 600; letter-spacing: 1.5px; }
