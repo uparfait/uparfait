@@ -4,9 +4,7 @@ export const hero = {
   roles: ["I am a Backend Developer"],
   projectsCta: "My Projects",
   intro: [
-    "I am a passionate Backend Developer.",
-    "My career path is focused on building scalable, user-friendly applications that drive digital transformation.",
-    "With a strong commitment to continuous learning, I quickly adapt to emerging technologies and frameworks, ensuring I stay ahead in the fast-evolving tech landscape.",
-    "My goal is to contribute innovative solutions while gaining hands-on experience in professional software development environments.",
+    "As a Back End Developer:",
+    "Designing scalable system architectures, addressing scaling bottlenecks, optimizing testing pipelines, and aligning with functional requirements for long-term scalability is the goal.",
   ],
 };
