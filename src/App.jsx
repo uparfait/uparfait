@@ -1,14 +1,16 @@
 import Header from "./modules/header/Header";
-import { sections } from "./core/modules";
-import useHashScroll from "./hooks/useHashScroll";
+import { order, sections } from "./core/modules";
+import useActiveSection from "./hooks/useActiveSection";
+import useHashSync from "./hooks/useHashSync";
 import useViewportScale from "./hooks/useViewportScale";
 
 export default function App() {
   useViewportScale();
-  useHashScroll();
+  const active = useActiveSection(order);
+  useHashSync(active, order[0]);
   return (
     <>
-      <Header />
+      <Header active={active} />
       <main>
         {sections.map(({ id, Component }) => (
           <Component key={id} />

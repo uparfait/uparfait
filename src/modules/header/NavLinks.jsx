@@ -1,10 +1,6 @@
 import { nav } from "../../content/nav";
-import useActiveSection from "../../hooks/useActiveSection";
 
-const ids = nav.links.map((link) => link.id);
-
-export default function NavLinks({ className, onNavigate, children }) {
-  const active = useActiveSection(ids);
+export default function NavLinks({ className, active, onNavigate, children }) {
   return (
     <nav className={className}>
       {nav.links.map((link) => (

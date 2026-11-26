@@ -5,7 +5,7 @@ import MobileMenu from "./MobileMenu";
 import MenuIcon from "../../shared/icons/MenuIcon";
 import "./header.css";
 
-export default function Header() {
+export default function Header({ active }) {
   const [open, setOpen] = useState(false);
   useEffect(() => {
     if (!open) return;
@@ -17,11 +17,11 @@ export default function Header() {
     <>
       <header className="site-header">
         <a href="#whoami" className="brand"><span className="brand-accent">{nav.brand.accent}</span>{nav.brand.rest}</a>
-        <NavLinks className="desktop-nav" />
+        <NavLinks className="desktop-nav" active={active} />
         <a href={nav.cta.href} className="btn btn-dark header-cta">{nav.cta.label}</a>
         <button className="menu-btn" onClick={() => setOpen((v) => !v)} aria-label={nav.menu}><MenuIcon open={open} /></button>
       </header>
-      {open && <MobileMenu onClose={() => setOpen(false)} />}
+      {open && <MobileMenu active={active} onClose={() => setOpen(false)} />}
     </>
   );
 }
